@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumpei">
+
+        <h1>list </h1>
+        <% members.forEach(element => { %>
+            
+                    
+            <p><%=element.id %> </p>
+       
+    <% }) %>
+        <% members.forEach(element => { %>
+            <div class="box">
+                <a href="">
+    
+                    <h1><%=element.name %> </h1>
+                    <h1><%=element.email %> </h1>
+                    <h3><%=element.id %> </h3>
+                </a>
+            </div>
+        <% }) %>
+    </div>
+
+    <form action="/api/members" method = "post" class="form">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="email" placeholder="email">
+        <button type = "submit">add member</button>
+    </form>
+    
+            
+<style>
+    body{
+        position: relative;
+    }
+    .jumpei{
+        position: absolute;
+    }
+    .form{
+        position: absolute;
+        right: 300px;
+        top: 300px;
+    }
+    .box{
+        width: 400px;
+        height: 200px;
+        background-color: rgb(52, 52, 95);
+        color: rgb(238, 206, 166);
+        padding-top: 1%;
+        padding-left: 2%;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+
+    .box a{
+        text-decoration: none;
+        color: rgb(238, 206, 166);
+    }
+    .box:hover{
+        transform: translateX(50px);
+        transition: 1s;
+    }
+</style>
+
+</body>
+</html>
